@@ -27,12 +27,12 @@ def execulta_comando():
 
 def comando_voz_usuario():
     comando = execulta_comando()
-    if 'horas' in comando:
+    if 'horas' in comando:  # biblioteca datetime
         hora = datetime.datetime.now().strftime('%H:%M')
         maquina.say('agora são' + hora)
         maquina.runAndWait()
 
-    elif 'procure por' in comando:
+    elif 'procure por' in comando:  # API da Wikipédia para Python
         procurar = comando.replace('procure por', '')
         wikipedia.set_lang('pt')
         resultado = wikipedia.summary(procurar, 2)
@@ -40,7 +40,7 @@ def comando_voz_usuario():
         maquina.say(resultado)
         maquina.runAndWait()
 
-    elif 'toque' in comando:
+    elif 'toque' in comando:  # biblioteca pywhatkit
         musica = comando.replace('toque', '')
         pywhatkit.playonyt(musica)
         maquina.say('tocando musica')
