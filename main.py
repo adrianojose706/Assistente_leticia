@@ -31,6 +31,7 @@ def comando_voz_usuario():
         hora = datetime.datetime.now().strftime('%H:%M')
         maquina.say('agora são' + hora)
         maquina.runAndWait()
+
     elif 'procure por' in comando:
         procurar = comando.replace('procure por', '')
         wikipedia.set_lang('pt')
@@ -38,9 +39,10 @@ def comando_voz_usuario():
         print(resultado)
         maquina.say(resultado)
         maquina.runAndWait()
+
     elif 'toque' in comando:
         musica = comando.replace('toque', '')
-        resultado = pywhatkit.playonyt(musica)
+        pywhatkit.playonyt(musica)
         maquina.say('tocando musica')
         maquina.runAndWait()
 
