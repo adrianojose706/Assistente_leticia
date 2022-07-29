@@ -8,6 +8,7 @@ Técnologias:
         Reconhecimento de voz.
         Simtese de voz.
         algum tipo de IA.
+        
 API e Bibliotecas:
         1: speech_recognition as sr: Biblioteca para realização de reconhecimento de fala, com suporte para diversos motores e APIs, online e offline.
         2: pyaudio: O PyAudio fornece ligações Python para PortAudio v19, a biblioteca de E/S de áudio multiplataforma.
